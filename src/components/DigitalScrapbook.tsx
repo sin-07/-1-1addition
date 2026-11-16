@@ -43,7 +43,7 @@ export default function DigitalScrapbook({ id = "scrapbook-section" }: DigitalSc
       </div>
 
       {/* Scrapbook Open Book / Polaroid Frame */}
-      <div className="relative max-w-xl mx-auto p-8 sm:p-12 rounded-3xl bg-[#130f24] border-2 border-amber-300/30 shadow-2xl shadow-purple-900/30">
+      <div className="relative max-w-xl mx-auto p-4 sm:p-12 rounded-3xl bg-[#130f24] border-2 border-amber-300/30 shadow-2xl shadow-purple-900/30">
         {/* Washi Tape Accent at Top */}
         <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-7 bg-amber-200/40 backdrop-blur-md border border-white/20 rotate-1 shadow-sm" />
 

@@ -45,10 +45,10 @@ export default function MusicPlayer() {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-40 select-none">
+    <div className="fixed bottom-4 right-3 sm:bottom-5 sm:right-5 z-40 select-none max-w-[calc(100vw-1.5rem)]">
       {/* Expanded Music Card */}
       {isExpanded && (
-        <div className="mb-3 p-4 rounded-3xl glass-panel border border-pink-400/30 w-72 sm:w-80 shadow-2xl backdrop-blur-xl animate-fadeIn">
+        <div className="mb-3 p-4 rounded-3xl glass-panel border border-pink-400/30 w-[calc(100vw-2rem)] max-w-xs shadow-2xl backdrop-blur-xl animate-fadeIn">
           <div className="flex items-center justify-between mb-3">
             <span className="text-[10px] text-pink-300 uppercase tracking-widest font-semibold flex items-center gap-1.5">
               <Music className="w-3 h-3 text-pink-400" />

@@ -146,7 +146,7 @@ export default function SecretEnvelopes({ id = "envelopes-section" }: SecretEnve
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-xl p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-[#18112b] via-[#1f1338] to-[#120a22] border-2 border-pink-400/40 shadow-2xl animate-scaleUp"
+            className="relative w-full max-w-xl p-5 sm:p-10 max-h-[90vh] overflow-y-auto rounded-3xl bg-gradient-to-b from-[#18112b] via-[#1f1338] to-[#120a22] border-2 border-pink-400/40 shadow-2xl animate-scaleUp"
           >
             <button
               onClick={() => setOpenedEnvelope(null)}

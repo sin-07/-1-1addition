@@ -143,7 +143,7 @@ export default function BirthdayCake({ id = "cake-section" }: BirthdayCakeProps)
         </div>
 
         {/* Top Cake Tier */}
-        <div className="w-48 sm:w-60 h-16 sm:h-18 rounded-t-2xl bg-gradient-to-r from-[#2c1740] via-[#4d215e] to-[#2c1740] border-t-4 border-pink-300/60 shadow-inner relative flex flex-col items-center justify-center">
+        <div className="w-44 sm:w-60 h-16 sm:h-18 rounded-t-2xl bg-gradient-to-r from-[#2c1740] via-[#4d215e] to-[#2c1740] border-t-4 border-pink-300/60 shadow-inner relative flex flex-col items-center justify-center">
           <div className="absolute top-0 inset-x-0 flex justify-around">
             {[...Array(6)].map((_, i) => (
               <div key={i} className="w-3.5 h-4 bg-pink-300 rounded-b-full shadow-sm" />
@@ -156,7 +156,7 @@ export default function BirthdayCake({ id = "cake-section" }: BirthdayCakeProps)
         </div>
 
         {/* Tier 2 Candles (Middle Row: 8 Candles on ledge) */}
-        <div className="relative z-10 flex items-end justify-center gap-2 sm:gap-4 -my-2">
+        <div className="relative z-10 flex items-end justify-center gap-1.5 sm:gap-4 -my-2">
           {candles.slice(7, 15).map((isLit, idx) => (
             <CandleItem
               key={idx + 7}
@@ -169,9 +169,9 @@ export default function BirthdayCake({ id = "cake-section" }: BirthdayCakeProps)
         </div>
 
         {/* Middle Cake Tier */}
-        <div className="w-64 sm:w-80 h-20 sm:h-24 bg-gradient-to-r from-[#201133] via-[#3d1852] to-[#201133] border-t-4 border-amber-300/70 shadow-md relative flex items-center justify-center">
-          <div className="text-center">
-            <span className="text-sm sm:text-base font-serif text-amber-200 tracking-wider font-bold block">
+        <div className="w-60 sm:w-80 h-20 sm:h-24 bg-gradient-to-r from-[#201133] via-[#3d1852] to-[#201133] border-t-4 border-amber-300/70 shadow-md relative flex items-center justify-center">
+          <div className="text-center px-2">
+            <span className="text-sm sm:text-base font-serif text-amber-200 tracking-wider font-bold block truncate max-w-[220px] sm:max-w-none">
               Akankshya Mishra
             </span>
             <span className="text-[10px] text-pink-300/80 tracking-widest uppercase">
@@ -181,7 +181,7 @@ export default function BirthdayCake({ id = "cake-section" }: BirthdayCakeProps)
         </div>
 
         {/* Tier 3 Candles (Bottom Row: 8 Candles on base ledge) */}
-        <div className="relative z-10 flex items-end justify-center gap-2 sm:gap-4 -my-2">
+        <div className="relative z-10 flex items-end justify-center gap-1.5 sm:gap-4 -my-2">
           {candles.slice(15, 23).map((isLit, idx) => (
             <CandleItem
               key={idx + 15}
@@ -194,16 +194,16 @@ export default function BirthdayCake({ id = "cake-section" }: BirthdayCakeProps)
         </div>
 
         {/* Bottom Cake Tier */}
-        <div className="w-80 sm:w-96 h-22 sm:h-28 rounded-b-3xl bg-gradient-to-r from-[#170a26] via-[#2a0e3f] to-[#170a26] border-t-4 border-pink-400/80 shadow-2xl relative flex items-center justify-center">
-          <div className="flex items-center gap-2 text-pink-300/80 text-xs sm:text-sm font-serif">
-            <Heart className="w-4 h-4 fill-rose-500 text-rose-500" />
+        <div className="w-72 sm:w-96 max-w-[92vw] h-20 sm:h-28 rounded-b-3xl bg-gradient-to-r from-[#170a26] via-[#2a0e3f] to-[#170a26] border-t-4 border-pink-400/80 shadow-2xl relative flex items-center justify-center px-3">
+          <div className="flex items-center gap-1.5 text-pink-300/80 text-xs sm:text-sm font-serif text-center">
+            <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500 flex-shrink-0" />
             <span>Forever Loved by Aniket Singh</span>
-            <Heart className="w-4 h-4 fill-rose-500 text-rose-500" />
+            <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500 flex-shrink-0" />
           </div>
         </div>
 
         {/* Golden Cake Stand */}
-        <div className="w-84 sm:w-[410px] h-5 bg-gradient-to-r from-amber-600 via-amber-300 to-amber-600 rounded-full shadow-xl shadow-amber-500/20 -mt-1" />
+        <div className="w-76 sm:w-[410px] max-w-[95vw] h-5 bg-gradient-to-r from-amber-600 via-amber-300 to-amber-600 rounded-full shadow-xl shadow-amber-500/20 -mt-1" />
         <div className="w-36 sm:w-48 h-4 bg-gradient-to-r from-amber-700 via-amber-400 to-amber-700 rounded-b-xl shadow-md" />
       </div>
 

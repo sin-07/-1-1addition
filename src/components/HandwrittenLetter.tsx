@@ -72,7 +72,7 @@ export default function HandwrittenLetter({ id = "letter-section" }: Handwritten
 
         <div
           ref={parchmentRef}
-          className="relative rounded-3xl p-8 sm:p-14 bg-gradient-to-b from-[#18152e]/95 via-[#1c1433]/95 to-[#120e26]/95 border border-amber-300/30 shadow-2xl backdrop-blur-xl"
+          className="relative rounded-3xl p-5 sm:p-14 bg-gradient-to-b from-[#18152e]/95 via-[#1c1433]/95 to-[#120e26]/95 border border-amber-300/30 shadow-2xl backdrop-blur-xl"
         >
           {/* Header Wax Seal Stamp */}
           <div className="flex items-center justify-between border-b border-amber-200/15 pb-6 mb-8">

@@ -131,7 +131,7 @@ export default function VoiceMessagePlayer({ id = "voice-section" }: VoiceMessag
         {/* Action Controls */}
         <div className="flex items-center justify-between pt-2">
           <p className="text-xs text-slate-400 italic">
-            &ldquo;A little piece of my heart recorded for you, Akku.&rdquo;
+            &ldquo;A little piece of my heart recorded for you, Akankshya.&rdquo;
           </p>
 
           <button

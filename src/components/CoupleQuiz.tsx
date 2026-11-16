@@ -160,7 +160,7 @@ export default function CoupleQuiz({ id = "quiz-section" }: CoupleQuizProps) {
             </p>
             <p className="text-slate-300/80 text-xs sm:text-sm max-w-md mx-auto mb-8">
               {score >= 4
-                ? "Perfect score! We are so in sync it's scary. You know my heart inside out, Akku! ❤️"
+                ? "Perfect score! We are so in sync it's scary. You know my heart inside out, Akankshya! ❤️"
                 : "A delightful score! Every memory we make is etched in our hearts forever."}
             </p>
 

@@ -68,7 +68,7 @@ export const birthdayData = {
   recipient: {
     fullName: "Akankshya Mishra",
     preferredName: "Akankshya",
-    nicknames: ["Akku ❤️", "My Star ✨", "Sunshine ☀️", "Pari 🕊️"],
+    nicknames: ["Akankshya ❤️", "My Star ✨", "Sunshine ☀️", "Pari 🕊️"],
     age: 23,
     birthdayDate: "17 November 2026",
     countdownTarget: "2026-11-17T00:00:00",
@@ -121,7 +121,7 @@ export const birthdayData = {
     duration: "1:23",
     date: "17 Nov 2026",
     transcript:
-      "Hey Akku... Happy 23rd birthday, my love! I just wanted to leave this for you to hear my voice whenever you want a reminder of how deeply you are loved. Watching you grow, laugh, and shine is my greatest privilege. You make every single day of my life feel like poetry. Have the happiest birthday, my queen. I love you to the moon and back! ❤️",
+      "Hey Akankshya... Happy 23rd birthday, my love! I just wanted to leave this for you to hear my voice whenever you want a reminder of how deeply you are loved. Watching you grow, laugh, and shine is my greatest privilege. You make every single day of my life feel like poetry. Have the happiest birthday, my queen. I love you to the moon and back! ❤️",
   },
 
   // Our Story Timeline
@@ -484,7 +484,7 @@ export const birthdayData = {
       title: "Open When You Miss Me",
       triggerMood: "When distance feels too heavy",
       message:
-        "My dearest Akku, whenever you feel alone or miss my presence, close your eyes and place your hand on your heart. Every single beat carries a piece of my love for you. No matter the miles, no matter the time of day, I am always thinking of you, rooting for you, and counting down the seconds until I hold you again. You are never alone ❤️",
+        "My dearest Akankshya, whenever you feel alone or miss my presence, close your eyes and place your hand on your heart. Every single beat carries a piece of my love for you. No matter the miles, no matter the time of day, I am always thinking of you, rooting for you, and counting down the seconds until I hold you again. You are never alone ❤️",
       signature: "Your Aniket, always by your side",
       color: "#f472b6",
     },
@@ -655,7 +655,7 @@ export const birthdayData = {
 
   // Handwritten Love Letter from Aniket
   handwrittenLetter: {
-    salutation: "My Dearest Akku,",
+    salutation: "My Dearest Akankshya,",
     paragraphs: [
       "On this seventeenth day of November, the universe gave me its greatest blessing: YOU. Twenty-three years ago, the world welcomed someone whose gentle strength, infectious warmth, and radiant grace would one day become my entire universe.",
       "Loving you has been the most natural, effortless, and beautiful experience of my life. You have seen me at my best and at my most vulnerable, and in your eyes, I have always found acceptance, encouragement, and peace. You don't just brighten my days—you give them purpose.",
@@ -675,7 +675,7 @@ export const birthdayData = {
     "May the universe open every golden door of opportunity before your brilliant mind! 🗝️",
     "Here’s to late night drives, tightest hugs, and growing even more deeply in love! 🚗❤️",
     "May your heart never doubt how deeply, unconditionally, and fiercely you are adored! 💖",
-    "Wishing my Akku a 23rd chapter filled with magic, miracles, and endless blessings! 🌟",
+    "Wishing my Akankshya a 23rd chapter filled with magic, miracles, and endless blessings! 🌟",
     "You are the star of my life. Happy 23rd Birthday, Akankshya! 🎂🥂",
   ],
 
@@ -695,7 +695,7 @@ export const birthdayData = {
   easterEggs: {
     secretKey: "A",
     secretMessage:
-      "🎉 SECRET EASTER EGG UNLOCKED! 🎉\n\nHey Akku! You found the secret hidden corner of your website! Aniket loves you 3000, to infinity and beyond! Here's a million extra hugs just for being so curious and cute! 🥰❤️",
+      "🎉 SECRET EASTER EGG UNLOCKED! 🎉\n\nHey Akankshya! You found the secret hidden corner of your website! Aniket loves you 3000, to infinity and beyond! Here's a million extra hugs just for being so curious and cute! 🥰❤️",
   },
 };
 

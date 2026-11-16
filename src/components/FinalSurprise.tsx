@@ -244,7 +244,7 @@ export default function FinalSurprise({ id = "final-section", onReplay }: FinalS
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-lg animate-fadeIn overflow-y-auto">
           <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none z-0 w-full h-full" />
 
-          <div className="relative z-10 w-full max-w-2xl p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-[#1b102f]/95 via-[#180d2b]/95 to-[#0e071c]/95 border-2 border-amber-400/50 shadow-2xl shadow-pink-500/30 text-center animate-scaleUp my-8">
+          <div className="relative z-10 w-full max-w-2xl p-5 sm:p-12 rounded-3xl bg-gradient-to-b from-[#1b102f]/95 via-[#180d2b]/95 to-[#0e071c]/95 border-2 border-amber-400/50 shadow-2xl shadow-pink-500/30 text-center animate-scaleUp my-4 sm:my-8 max-h-[92vh] overflow-y-auto">
             <button
               onClick={() => setShowModal(false)}
               className="absolute top-5 right-5 w-9 h-9 rounded-full bg-black/50 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"

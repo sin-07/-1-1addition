@@ -139,7 +139,7 @@ export default function HeroSection({
       <div
         onClick={handleHeartClick}
         className="relative my-4 group cursor-pointer select-none transition-transform duration-500 hover:scale-105"
-        title="Tap to send love to Akku ❤️"
+        title="Tap to send love to Akankshya ❤️"
       >
         {/* Animated Multi-layer Halo Ring */}
         <div className="absolute -inset-2.5 rounded-full bg-gradient-to-tr from-pink-500 via-purple-500 to-amber-300 opacity-70 blur-xl group-hover:opacity-100 transition-opacity duration-700 animate-pulse-glow" />
@@ -171,9 +171,9 @@ export default function HeroSection({
       {/* Main Heading with 3D Tilt */}
       <h1
         ref={titleRef}
-        className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight max-w-5xl leading-[1.1] mb-4 [transform-style:preserve-3d]"
+        className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight max-w-5xl leading-[1.15] mb-4 [transform-style:preserve-3d] break-words"
       >
-        <span className="block text-slate-200 text-xl sm:text-3xl md:text-4xl font-light font-sans tracking-widest uppercase mb-2 opacity-90">
+        <span className="block text-slate-200 text-lg sm:text-2xl md:text-4xl font-light font-sans tracking-widest uppercase mb-2 opacity-90">
           Happy 23rd Birthday,
         </span>
         <span className="text-magic-gradient drop-shadow-sm inline-block">
@@ -181,7 +181,7 @@ export default function HeroSection({
         </span>
         <span
           onClick={handleHeartClick}
-          className="inline-block ml-3 text-rose-500 cursor-pointer hover:scale-125 transition-transform select-none"
+          className="inline-block ml-2 sm:ml-3 text-rose-500 cursor-pointer hover:scale-125 transition-transform select-none"
           title="Send love"
         >
           ❤️
@@ -209,11 +209,11 @@ export default function HeroSection({
       </div>
 
       {/* Action Buttons with GSAP Magnetic Attraction */}
-      <div className="flex flex-wrap items-center justify-center gap-3.5 max-w-2xl w-full mt-4">
+      <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-3.5 max-w-2xl w-full mt-4">
         <button
           ref={btn1Ref}
           onClick={onScrollToCake}
-          className="flex-1 min-w-[170px] px-6 py-3.5 rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-purple-600 text-white font-medium text-sm sm:text-base shadow-glow-pink hover:shadow-glow-lg transition-all flex items-center justify-center gap-2"
+          className="w-full sm:w-auto sm:flex-1 sm:min-w-[170px] px-5 sm:px-6 py-3.5 rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-purple-600 text-white font-medium text-sm sm:text-base shadow-glow-pink hover:shadow-glow-lg transition-all flex items-center justify-center gap-2"
         >
           <Cake className="w-4 h-4 text-amber-200" />
           <span>23 Birthday Candles</span>
@@ -222,7 +222,7 @@ export default function HeroSection({
         <button
           ref={btn2Ref}
           onClick={onScrollToStory}
-          className="flex-1 min-w-[170px] px-6 py-3.5 rounded-full glass-panel border border-white/15 text-slate-200 hover:text-white hover:border-pink-400/40 font-medium text-sm sm:text-base transition-all flex items-center justify-center gap-2"
+          className="w-full sm:w-auto sm:flex-1 sm:min-w-[170px] px-5 sm:px-6 py-3.5 rounded-full glass-panel border border-white/15 text-slate-200 hover:text-white hover:border-pink-400/40 font-medium text-sm sm:text-base transition-all flex items-center justify-center gap-2"
         >
           <BookOpen className="w-4 h-4 text-pink-300" />
           <span>Our Story Timeline</span>
@@ -231,7 +231,7 @@ export default function HeroSection({
         <button
           ref={btn3Ref}
           onClick={onScrollToReasons}
-          className="flex-1 min-w-[170px] px-6 py-3.5 rounded-full glass-panel border border-white/15 text-purple-200 hover:text-white hover:border-purple-400/40 font-medium text-sm sm:text-base transition-all flex items-center justify-center gap-2"
+          className="w-full sm:w-auto sm:flex-1 sm:min-w-[170px] px-5 sm:px-6 py-3.5 rounded-full glass-panel border border-white/15 text-purple-200 hover:text-white hover:border-purple-400/40 font-medium text-sm sm:text-base transition-all flex items-center justify-center gap-2"
         >
           <Heart className="w-4 h-4 text-rose-400 fill-rose-400" />
           <span>23 Reasons I Love You</span>
@@ -240,7 +240,7 @@ export default function HeroSection({
         <button
           ref={btn4Ref}
           onClick={onScrollToFinal}
-          className="w-full sm:w-auto px-6 py-3.5 rounded-full glass-panel border border-amber-400/30 text-amber-200 hover:text-amber-100 hover:border-amber-400/60 font-medium text-sm sm:text-base transition-all flex items-center justify-center gap-2"
+          className="w-full sm:w-auto px-5 sm:px-6 py-3.5 rounded-full glass-panel border border-amber-400/30 text-amber-200 hover:text-amber-100 hover:border-amber-400/60 font-medium text-sm sm:text-base transition-all flex items-center justify-center gap-2"
         >
           <Gift className="w-4 h-4 text-amber-300" />
           <span>Aniket&apos;s Final Surprise</span>
