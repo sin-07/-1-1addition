@@ -114,12 +114,12 @@ export default function OurStoryTimeline({ id = "story-section" }: OurStoryTimel
                     className="p-6 sm:p-7 rounded-3xl glass-panel border border-white/10 hover:border-pink-400/40 transition-all duration-300 shadow-xl group hover:shadow-glow-pink cursor-pointer"
                   >
                     {/* Image */}
-                    <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden mb-4 bg-slate-800">
+                    <div className="relative w-full aspect-[4/5] sm:aspect-[4/3] rounded-2xl overflow-hidden mb-4 bg-slate-800">
                       <Image
                         src={item.image}
                         alt={item.title}
                         fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
 

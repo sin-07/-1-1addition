@@ -13,6 +13,7 @@ interface MemoryGalleryProps {
 
 export default function MemoryGallery({ id = "memories-section" }: MemoryGalleryProps) {
   const [selectedMemoryIndex, setSelectedMemoryIndex] = useState<number | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>("All");
   const [likesMap, setLikesMap] = useState<Record<string, number>>(() => {
     const initial: Record<string, number> = {};
     birthdayData.memories.forEach((m: MemoryItem) => {
@@ -25,6 +26,13 @@ export default function MemoryGallery({ id = "memories-section" }: MemoryGallery
   const sectionRef = useRef<HTMLElement | null>(null);
   const gridRef = useRef<HTMLDivElement | null>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
+
+  const categories = ["All", "Traditional", "Golden Hour", "Cuteness", "Style", "Magic"];
+
+  const filteredMemories =
+    activeCategory === "All"
+      ? birthdayData.memories
+      : birthdayData.memories.filter((m: MemoryItem) => m.tag.includes(activeCategory));
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -44,6 +52,24 @@ export default function MemoryGallery({ id = "memories-section" }: MemoryGallery
 
     return () => ctx.revert();
   }, []);
+
+  // Keyboard navigation for lightbox
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedMemoryIndex === null) return;
+      if (e.key === "Escape") setSelectedMemoryIndex(null);
+      if (e.key === "ArrowRight") {
+        setSelectedMemoryIndex((selectedMemoryIndex + 1) % birthdayData.memories.length);
+      }
+      if (e.key === "ArrowLeft") {
+        setSelectedMemoryIndex(
+          (selectedMemoryIndex - 1 + birthdayData.memories.length) % birthdayData.memories.length
+        );
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedMemoryIndex]);
 
   const handleLike = (e: React.MouseEvent, memId: string) => {
     e.stopPropagation();
@@ -91,10 +117,10 @@ export default function MemoryGallery({ id = "memories-section" }: MemoryGallery
   return (
     <section ref={sectionRef} id={id} className="relative py-28 px-4 sm:px-6 max-w-6xl mx-auto">
       {/* Header */}
-      <div className="text-center max-w-2xl mx-auto mb-16">
+      <div className="text-center max-w-2xl mx-auto mb-10">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel border border-pink-400/20 text-pink-300 text-xs font-medium uppercase tracking-widest mb-4">
           <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-          <span>Cherished Chapters</span>
+          <span>Cherished Chapters • 12 Memories</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-serif text-white mb-4">
           The Gallery of Memories
@@ -104,11 +130,32 @@ export default function MemoryGallery({ id = "memories-section" }: MemoryGallery
         </p>
       </div>
 
+      {/* Category Filter Pills */}
+      <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => {
+              soundManager.playChime(600, 0.1);
+              setActiveCategory(cat);
+            }}
+            className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all ${
+              activeCategory === cat
+                ? "bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-lg shadow-pink-500/30 scale-105"
+                : "glass-panel border border-white/10 text-slate-300 hover:text-white hover:border-pink-400/40"
+            }`}
+          >
+            {cat} {cat === "All" ? `(${birthdayData.memories.length})` : ""}
+          </button>
+        ))}
+      </div>
+
       {/* Grid of Polaroid Cards with GSAP Stagger */}
       <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {birthdayData.memories.map((mem: MemoryItem, index: number) => {
+        {filteredMemories.map((mem: MemoryItem, index: number) => {
           const isLiked = likedIds.has(mem.id);
           const count = likesMap[mem.id] ?? mem.likes;
+          const globalIndex = birthdayData.memories.findIndex((m: MemoryItem) => m.id === mem.id);
 
           return (
             <div
@@ -117,24 +164,24 @@ export default function MemoryGallery({ id = "memories-section" }: MemoryGallery
                 if (el) cardsRef.current[index] = el;
               }}
             >
-              <TiltCard onClick={() => handleOpenModal(index)}>
+              <TiltCard onClick={() => handleOpenModal(globalIndex !== -1 ? globalIndex : index)}>
                 <div className="relative p-4 rounded-3xl glass-panel border border-white/10 hover:border-pink-400/40 transition-all duration-300 group shadow-lg flex flex-col h-full">
-                  {/* Image Container */}
-                  <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-800/80 mb-4">
+                  {/* Portrait Image Container */}
+                  <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-slate-800/80 mb-4">
                     <Image
                       src={mem.image}
                       alt={mem.title}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 
-                    <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/15 text-[11px] text-pink-200 font-medium">
+                    <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] text-pink-200 font-medium">
                       {mem.tag}
                     </div>
 
-                    <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 backdrop-blur-md border border-white/15 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                       <ZoomIn className="w-4 h-4 text-white" />
                     </div>
                   </div>
@@ -196,47 +243,48 @@ export default function MemoryGallery({ id = "memories-section" }: MemoryGallery
       {selectedMemory && (
         <div
           onClick={() => setSelectedMemoryIndex(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 animate-fadeIn"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 animate-fadeIn"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-2xl rounded-3xl glass-panel border border-pink-400/30 overflow-hidden shadow-2xl animate-scaleUp"
+            className="relative w-full max-w-lg rounded-3xl glass-panel border border-pink-400/40 overflow-hidden shadow-2xl animate-scaleUp max-h-[92vh] flex flex-col"
           >
             {/* Close Button */}
             <button
               onClick={() => setSelectedMemoryIndex(null)}
-              className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+              className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-black/70 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors shadow-lg"
             >
               <X className="w-5 h-5" />
             </button>
 
-            {/* Modal Image */}
-            <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] bg-slate-900">
+            {/* Modal Image (Portrait-friendly) */}
+            <div className="relative w-full aspect-[3/4] sm:aspect-[4/5] bg-slate-950 flex-shrink-0">
               <Image
                 src={selectedMemory.image}
                 alt={selectedMemory.title}
                 fill
-                className="object-cover"
+                priority
+                className="object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0d0e24] via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0d0e24] via-transparent to-transparent opacity-80" />
 
               {/* Prev / Next Arrows */}
               <button
                 onClick={prevMemory}
-                className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-white/20"
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-black/70 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all hover:scale-110 shadow-lg"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={nextMemory}
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-white/20"
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-black/70 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all hover:scale-110 shadow-lg"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
             </div>
 
             {/* Modal Body */}
-            <div className="p-6 sm:p-8 bg-[#0d0e24]">
+            <div className="p-5 sm:p-6 bg-[#0d0e24] overflow-y-auto">
               <div className="flex items-center gap-3 text-xs text-pink-300 mb-2">
                 <span className="px-2.5 py-0.5 rounded-full bg-pink-500/20 border border-pink-500/30 font-medium">
                   {selectedMemory.tag}
@@ -253,30 +301,22 @@ export default function MemoryGallery({ id = "memories-section" }: MemoryGallery
                 )}
               </div>
 
-              <h3 className="text-2xl font-serif text-white mb-3">
+              <h3 className="text-xl sm:text-2xl font-serif text-white mb-2">
                 {selectedMemory.title}
               </h3>
 
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+              <p className="text-slate-300 text-sm leading-relaxed mb-4">
                 {selectedMemory.caption}
               </p>
 
-              <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                <div className="text-xs text-slate-400">
-                  A cherished celebration memory for Akankshya ❤️
-                </div>
+              <div className="flex items-center justify-between pt-3 border-t border-white/10 text-xs text-slate-400">
+                <span>Photo {(selectedMemoryIndex ?? 0) + 1} of {birthdayData.memories.length}</span>
                 <button
                   onClick={(e) => handleLike(e, selectedMemory.id)}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-pink-500/20 border border-pink-400/40 text-pink-200 text-xs font-medium hover:bg-pink-500/30 transition-all"
+                  className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 text-xs hover:bg-rose-500/30"
                 >
-                  <Heart
-                    className={`w-4 h-4 ${
-                      likedIds.has(selectedMemory.id) ? "fill-rose-400 text-rose-400" : ""
-                    }`}
-                  />
-                  <span>
-                    {(likesMap[selectedMemory.id] ?? selectedMemory.likes)} Hearts
-                  </span>
+                  <Heart className="w-3.5 h-3.5 fill-rose-400 text-rose-400" />
+                  <span>{likesMap[selectedMemory.id] ?? selectedMemory.likes} Love</span>
                 </button>
               </div>
             </div>

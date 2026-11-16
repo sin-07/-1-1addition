@@ -50,14 +50,15 @@ export default function DigitalScrapbook({ id = "scrapbook-section" }: DigitalSc
         {/* Polaroid Card */}
         <div className={`relative bg-[#fcfaf7] text-slate-900 p-4 sm:p-6 rounded-2xl shadow-xl transform ${currentItem.rotation} transition-transform duration-500`}>
           {/* Polaroid Image */}
-          <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-slate-200 mb-4">
+          <div className="relative w-full aspect-[3/4] sm:aspect-[4/5] rounded-xl overflow-hidden bg-slate-200 mb-4 shadow-inner">
             <Image
               src={currentItem.image}
               alt={currentItem.title}
               fill
-              className="object-cover"
+              priority
+              className="object-cover object-top"
             />
-            <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] text-white font-medium">
+            <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] text-white font-medium shadow-md">
               {currentItem.sticker}
             </div>
           </div>

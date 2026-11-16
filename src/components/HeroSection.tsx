@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 import { Sparkles, Heart, Gift, Cake, BookOpen, ChevronDown } from "lucide-react";
 import { birthdayData } from "@/data/birthdayData";
 import { soundManager } from "@/utils/soundEffects";
@@ -127,11 +128,44 @@ export default function HeroSection({
       {/* Chapter 23 Badge */}
       <div
         ref={badgeRef}
-        className="inline-flex items-center gap-2 px-5 py-2 rounded-full glass-panel border border-pink-500/30 text-pink-200 text-xs sm:text-sm font-medium tracking-wider mb-6 badge-glow cursor-default transition-shadow"
+        className="inline-flex items-center gap-2 px-5 py-2 rounded-full glass-panel border border-pink-500/30 text-pink-200 text-xs sm:text-sm font-medium tracking-wider mb-4 badge-glow cursor-default transition-shadow"
       >
         <Sparkles className="w-4 h-4 text-amber-300 animate-spin" style={{ animationDuration: "8s" }} />
         <span>{birthdayData.hero.badge}</span>
         <Heart className="w-3.5 h-3.5 text-rose-400 fill-rose-400 animate-pulse" />
+      </div>
+
+      {/* Centerpiece Spotlight Portrait of Akankshya */}
+      <div
+        onClick={handleHeartClick}
+        className="relative my-4 group cursor-pointer select-none transition-transform duration-500 hover:scale-105"
+        title="Tap to send love to Akku ❤️"
+      >
+        {/* Animated Multi-layer Halo Ring */}
+        <div className="absolute -inset-2.5 rounded-full bg-gradient-to-tr from-pink-500 via-purple-500 to-amber-300 opacity-70 blur-xl group-hover:opacity-100 transition-opacity duration-700 animate-pulse-glow" />
+        <div
+          className="absolute -inset-1 rounded-full bg-gradient-to-r from-amber-400 via-pink-500 to-purple-600 animate-spin"
+          style={{ animationDuration: "16s" }}
+        />
+
+        {/* Circular Avatar Frame */}
+        <div className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-[#080916] shadow-2xl shadow-pink-500/40 bg-slate-900">
+          <Image
+            src="/memories/akku-festive-red-smile.jpg"
+            alt={birthdayData.recipient.fullName}
+            fill
+            priority
+            sizes="(max-width: 768px) 176px, 192px"
+            className="object-cover object-top transition-transform duration-700 group-hover:scale-110"
+          />
+        </div>
+
+        {/* Floating Crown Pill */}
+        <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-[#0d0f22]/95 backdrop-blur-md border border-amber-400/50 text-[11px] sm:text-xs text-amber-300 font-serif font-semibold tracking-wide whitespace-nowrap shadow-lg flex items-center gap-1.5 group-hover:border-pink-400 transition-colors">
+          <span>👑</span>
+          <span>Akankshya • 23</span>
+          <Sparkles className="w-3 h-3 text-pink-300" />
+        </div>
       </div>
 
       {/* Main Heading with 3D Tilt */}

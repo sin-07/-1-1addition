@@ -265,15 +265,15 @@ export default function FinalSurprise({ id = "final-section", onReplay }: FinalS
             </h3>
 
             {/* Special Photo Highlight */}
-            <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden mb-6 border border-white/20 shadow-xl">
+            <div className="relative w-full aspect-[4/5] sm:aspect-[16/10] max-h-[50vh] rounded-2xl overflow-hidden mb-6 border-2 border-amber-400/50 shadow-2xl shadow-pink-500/30">
               <Image
-                src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1000&q=80"
+                src="/memories/akku-temple-grace.jpg"
                 alt="Akankshya & Aniket Forever"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end justify-center p-4">
-                <span className="text-white font-cursive text-2xl drop-shadow-md">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end justify-center p-4">
+                <span className="text-amber-200 font-serif text-xl sm:text-2xl drop-shadow-md">
                   Aniket ❤️ Akankshya • Destined Forever
                 </span>
               </div>
