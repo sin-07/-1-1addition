@@ -243,7 +243,7 @@ export default function HeroSection({
           className="w-full sm:w-auto px-5 sm:px-6 py-3.5 rounded-full glass-panel border border-amber-400/30 text-amber-200 hover:text-amber-100 hover:border-amber-400/60 font-medium text-sm sm:text-base transition-all flex items-center justify-center gap-2"
         >
           <Gift className="w-4 h-4 text-amber-300" />
-          <span>Aniket&apos;s Final Surprise</span>
+          <span>The Final Grand Surprise ✨</span>
         </button>
       </div>
 

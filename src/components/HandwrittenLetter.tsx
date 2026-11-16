@@ -56,7 +56,7 @@ export default function HandwrittenLetter({ id = "letter-section" }: Handwritten
       <div className="text-center max-w-2xl mx-auto mb-16">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel border border-pink-400/20 text-pink-300 text-xs font-medium uppercase tracking-widest mb-4">
           <Feather className="w-3.5 h-3.5 text-pink-300" />
-          <span>From Aniket&apos;s Heart</span>
+          <span>A Letter From The Heart</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-serif text-white mb-4">
           A Handwritten Love Letter
@@ -126,7 +126,7 @@ export default function HandwrittenLetter({ id = "letter-section" }: Handwritten
           {/* Bottom Accent */}
           <div className="mt-8 flex items-center justify-center gap-2 text-xs text-amber-300/70 font-medium tracking-widest uppercase">
             <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-            <span>Forever Cherished • Chapter 23 • Aniket & Akankshya</span>
+            <span>Forever Cherished • Chapter 23 • Vicky & Akankshya</span>
             <Heart className="w-3 h-3 text-rose-400 fill-rose-400" />
           </div>
         </div>

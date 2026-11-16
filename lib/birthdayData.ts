@@ -77,19 +77,19 @@ export const birthdayData = {
 
   // Sender details
   sender: {
-    fullName: "Aniket Singh",
-    preferredName: "Aniket",
+    fullName: "Vicky Singh",
+    preferredName: "Vicky",
     relationship: "Your Boyfriend & Biggest Fan",
-    signature: "Forever & Always Yours, Aniket ❤️",
+    signature: "Forever & Always Yours, Vicky ❤️",
   },
 
   // Hero Section
   hero: {
     badge: "✨ Chapter 23 • A Celebration of Us ✨",
     mainTitle: "Happy 23rd Birthday, Akankshya ❤️",
-    byline: "— With all my love, Aniket",
+    byline: "— With all my love, Vicky",
     subtitle:
-      "Twenty-three years ago, the universe brought forth the kindest, most radiant soul. Today, I celebrate you—my best friend, my greatest adventure, and the love of my life.",
+      "Twenty-three years ago, the universe brought forth the kindest, most radiant soul. Today, we celebrate you—my best friend, my greatest adventure, and the love of my life.",
   },
 
   // Music Playlist
@@ -114,9 +114,9 @@ export const birthdayData = {
     ],
   },
 
-  // Voice Note from Aniket
+  // Voice Note
   voiceNote: {
-    title: "A Voice Note From Aniket 🎙️",
+    title: "A Voice Note From Vicky 🎙️",
     subtitle: "Recorded with love just for your 23rd birthday",
     duration: "1:23",
     date: "17 Nov 2026",
@@ -366,7 +366,7 @@ export const birthdayData = {
     {
       number: 8,
       title: "The Way You Say My Name",
-      description: "Nobody in this entire world says 'Aniket' with as much tenderness as you do.",
+      description: "Nobody in this entire world says 'Vicky' with as much tenderness as you do.",
       iconName: "Mic",
       category: "Intimacy",
     },
@@ -477,7 +477,7 @@ export const birthdayData = {
     },
   ] as ReasonItem[],
 
-  // Secret Envelopes from Aniket
+  // Secret Envelopes
   secretEnvelopes: [
     {
       id: "env-1",
@@ -485,7 +485,7 @@ export const birthdayData = {
       triggerMood: "When distance feels too heavy",
       message:
         "My dearest Akankshya, whenever you feel alone or miss my presence, close your eyes and place your hand on your heart. Every single beat carries a piece of my love for you. No matter the miles, no matter the time of day, I am always thinking of you, rooting for you, and counting down the seconds until I hold you again. You are never alone ❤️",
-      signature: "Your Aniket, always by your side",
+      signature: "Your Vicky, always by your side",
       color: "#f472b6",
     },
     {
@@ -521,7 +521,7 @@ export const birthdayData = {
       triggerMood: "A special toast for 17 Nov 2026",
       message:
         "HAPPY 23RD BIRTHDAY MY QUEEN! 🎂🎉 Seeing you step into 23 with such radiance, wisdom, and beauty fills me with pure wonder. May this year shower you with unforgettable adventures, answered prayers, academic and career triumphs, and boundless happiness. I am honored to walk beside you. Cheers to 23 and a lifetime of our love!",
-      signature: "All my love, forever & always, Aniket",
+      signature: "All my love, forever & always, Vicky",
       color: "#f43f5e",
     },
   ] as SecretEnvelope[],
@@ -531,9 +531,9 @@ export const birthdayData = {
     {
       id: 1,
       question: "Who fell in love first?",
-      options: ["Aniket (head over heels instantly!)", "Akankshya", "It was simultaneous magic", "Both in denial at first"],
+      options: ["Vicky (head over heels instantly!)", "Akankshya", "It was simultaneous magic", "Both in denial at first"],
       correctIndex: 0,
-      aniketNote: "Aniket was completely smitten from the very first moment!",
+      aniketNote: "Vicky was completely smitten from the very first moment!",
     },
     {
       id: 2,
@@ -562,13 +562,13 @@ export const birthdayData = {
     {
       id: 4,
       question: "Who is more dramatic when they don't get food on time?",
-      options: ["Akankshya (hangry queen!)", "Aniket", "Equally dramatic", "Food resolves all drama!"],
+      options: ["Akankshya (hangry queen!)", "Vicky", "Equally dramatic", "Food resolves all drama!"],
       correctIndex: 0,
       aniketNote: "A hungry Akankshya is a cute force of nature! 😂",
     },
     {
       id: 5,
-      question: "What is Aniket's biggest dream for us?",
+      question: "What is our biggest dream for the future?",
       options: [
         "Traveling the world together hand-in-hand",
         "Building a warm, loving home full of laughter",
@@ -576,7 +576,7 @@ export const birthdayData = {
         "All of the above and so much more ❤️",
       ],
       correctIndex: 3,
-      aniketNote: "A lifetime of loving you is my greatest ambition.",
+      aniketNote: "A lifetime of loving you is our greatest adventure.",
     },
   ] as QuizQuestion[],
 
@@ -585,7 +585,7 @@ export const birthdayData = {
     overallPercentage: 100,
     headline: "A Match Written In The Constellations",
     summary:
-      "Cosmic algorithm test results: Aniket Singh & Akankshya Mishra share a 1-in-a-billion compatibility score across all emotional, spiritual, and romantic dimensions.",
+      "Cosmic algorithm test results: Vicky Singh & Akankshya Mishra share a 1-in-a-billion compatibility score across all emotional, spiritual, and romantic dimensions.",
     metrics: [
       { name: "Soul Connection", score: 100, comment: "Deep, unspoken telepathy" },
       { name: "Laughter & Banter", score: 99.9, comment: "Endless shared giggles" },
@@ -663,7 +663,7 @@ export const birthdayData = {
       "I promise to keep choosing you, loving you loudly, cheering for you in every dream you chase, and holding your hand through every chapter yet to come. May your 23rd year bring you as much joy as you have brought into my life.",
     ],
     closing: "Forever and always yours,",
-    signOff: "With all my heart & soul, Aniket ❤️",
+    signOff: "With all my heart & soul, Vicky ❤️",
     dateStamp: "17 November 2026 • Chapter 23",
   },
 
@@ -682,20 +682,20 @@ export const birthdayData = {
   // Final Surprise
   finalSurprise: {
     teaserTitle: "Wait… One Last Thing ❤️",
-    teaserSubtitle: "Before you finish your birthday journey, Aniket has one final surprise box waiting just for you.",
-    boxPrompt: "Open Aniket's Royal Birthday Vault",
+    teaserSubtitle: "Before you finish your birthday journey, there is one final surprise box waiting just for you.",
+    boxPrompt: "Open The Royal Birthday Vault ✨",
     headline: "You Are My Whole World, Akankshya!",
     message:
       "Thank you for being my girlfriend, my best friend, my confidante, and my greatest blessing. May your 23rd birthday be the start of the most unforgettable, magical, and joyful year of your life. I love you more than all the stars in the cosmos.",
     grandCelebrationWish: "Happy 23rd Birthday, Akankshya Mishra! ❤️✨",
-    signOff: "Forever Yours, Aniket Singh",
+    signOff: "Forever Yours, Vicky Singh",
   },
 
   // Easter Egg Secrets
   easterEggs: {
     secretKey: "A",
     secretMessage:
-      "🎉 SECRET EASTER EGG UNLOCKED! 🎉\n\nHey Akankshya! You found the secret hidden corner of your website! Aniket loves you 3000, to infinity and beyond! Here's a million extra hugs just for being so curious and cute! 🥰❤️",
+      "🎉 SECRET EASTER EGG UNLOCKED! 🎉\n\nHey Akankshya! You found the secret hidden corner of your website! Vicky loves you 3000, to infinity and beyond! Here's a million extra hugs just for being so curious and cute! 🥰❤️",
   },
 };
 

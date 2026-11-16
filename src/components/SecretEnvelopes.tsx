@@ -68,7 +68,7 @@ export default function SecretEnvelopes({ id = "envelopes-section" }: SecretEnve
           Secret Letters for Akankshya
         </h2>
         <p className="text-slate-300/80 text-sm sm:text-base">
-          Five private letters sealed with love by Aniket. Open them whenever your heart needs a gentle reminder of our love.
+          Five private letters sealed with love. Open them whenever your heart needs a gentle reminder of our bond.
         </p>
       </div>
 
@@ -164,7 +164,7 @@ export default function SecretEnvelopes({ id = "envelopes-section" }: SecretEnve
               </div>
               <div>
                 <span className="text-xs text-pink-300 tracking-wider uppercase font-semibold block">
-                  Private Note from Aniket
+                  A Love Note For You
                 </span>
                 <h3 className="text-2xl font-serif text-white">
                   {openedEnvelope.title}
@@ -181,7 +181,7 @@ export default function SecretEnvelopes({ id = "envelopes-section" }: SecretEnve
             <div className="flex items-center justify-between pt-2">
               <div className="flex items-center gap-1.5 text-xs text-slate-400">
                 <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
-                <span>Akankshya & Aniket • Chapter 23</span>
+                <span>Akankshya & Vicky • Chapter 23</span>
               </div>
               <span className="text-sm font-cursive text-pink-300 text-base">
                 {openedEnvelope.signature}

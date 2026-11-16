@@ -38,7 +38,7 @@ export default function DigitalScrapbook({ id = "scrapbook-section" }: DigitalSc
           Our Digital Scrapbook
         </h2>
         <p className="text-slate-300/80 text-xs sm:text-sm">
-          Snapshots taped with love, handwritten sticky notes, and memories crafted by Aniket.
+          Snapshots taped with love, handwritten sticky notes, and cherished memories.
         </p>
       </div>
 

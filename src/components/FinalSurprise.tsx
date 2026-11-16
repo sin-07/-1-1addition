@@ -257,7 +257,7 @@ export default function FinalSurprise({ id = "final-section", onReplay }: FinalS
             </div>
 
             <span className="text-xs text-amber-300 uppercase tracking-widest font-semibold block mb-2">
-              From Aniket To Akankshya
+              Dedicated To You, My Love
             </span>
 
             <h3 className="text-2xl sm:text-4xl font-serif text-white font-bold mb-4">
@@ -268,13 +268,13 @@ export default function FinalSurprise({ id = "final-section", onReplay }: FinalS
             <div className="relative w-full aspect-[4/5] sm:aspect-[16/10] max-h-[50vh] rounded-2xl overflow-hidden mb-6 border-2 border-amber-400/50 shadow-2xl shadow-pink-500/30">
               <Image
                 src="/memories/akku-temple-grace.jpg"
-                alt="Akankshya & Aniket Forever"
+                alt="Akankshya & Vicky Forever"
                 fill
                 className="object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end justify-center p-4">
                 <span className="text-amber-200 font-serif text-xl sm:text-2xl drop-shadow-md">
-                  Aniket ❤️ Akankshya • Destined Forever
+                  Vicky ❤️ Akankshya • Destined Forever
                 </span>
               </div>
             </div>

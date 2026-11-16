@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import confetti from "canvas-confetti";
+import Image from "next/image";
 import { Sparkles, Gift, Heart, Stars } from "lucide-react";
 import { birthdayData } from "@/data/birthdayData";
 import { soundManager } from "@/utils/soundEffects";
@@ -68,7 +69,12 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
       <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-purple-500/15 rounded-full blur-3xl animate-float-slow pointer-events-none" />
 
       {/* Teaser Phase */}
-      {phase === "teaser" && (
+      {/* Intro Images */}
+<div className="flex flex-wrap justify-center gap-4 mb-6">
+  <Image src="/images/first.jpg" alt="First birthday image" width={300} height={200} className="rounded-lg object-cover w-1/2 max-w-xs" />
+  <Image src="/images/second.jpg" alt="Second birthday image" width={300} height={200} className="rounded-lg object-cover w-1/2 max-w-xs" />
+</div>
+{phase === "teaser" && (
         <div className="flex flex-col items-center text-center max-w-lg">
           <div className="w-16 h-16 rounded-full bg-pink-500/10 border border-pink-500/20 flex items-center justify-center mb-6 animate-pulse">
             <Stars className="w-8 h-8 text-pink-300" />
@@ -78,7 +84,7 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
             <span className="inline-block w-1.5 h-7 ml-1 bg-pink-400 animate-pulse" />
           </h2>
           <p className="text-sm text-pink-200/50 mt-4 tracking-widest uppercase text-xs">
-            From Aniket with infinite love ❤️
+            Packed with infinite love just for you ❤️
           </p>
         </div>
       )}
@@ -92,7 +98,7 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
           </div>
 
           <h1 className="text-3xl sm:text-4xl font-serif text-white mb-2">
-            A Birthday Gift From Aniket
+            A 23rd Birthday Surprise ✨
           </h1>
           <p className="text-slate-300/80 text-sm mb-8">
             Turning 23 on 17 November 2026. Packed with memories, surprises, and endless love.

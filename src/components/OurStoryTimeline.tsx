@@ -69,7 +69,7 @@ export default function OurStoryTimeline({ id = "story-section" }: OurStoryTimel
           <span>Our Love Story</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-serif text-white mb-4">
-          How Aniket & Akankshya Happened
+          How Our Love Story Happened
         </h2>
         <p className="text-slate-300/80 text-sm sm:text-base">
           From the very first spark to this magnificent 23rd birthday milestone—every second with you is my favorite memory.

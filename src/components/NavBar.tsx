@@ -81,7 +81,7 @@ export default function NavBar({ onNavigate }: NavBarProps) {
             {birthdayData.recipient.preferredName}&apos;s 23rd
           </span>
           <span className="text-[9px] sm:text-[10px] text-pink-300/75 uppercase tracking-widest leading-none">
-            With Love, Aniket
+            With Love, Vicky
           </span>
         </div>
       </div>

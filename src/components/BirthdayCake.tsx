@@ -197,7 +197,7 @@ export default function BirthdayCake({ id = "cake-section" }: BirthdayCakeProps)
         <div className="w-72 sm:w-96 max-w-[92vw] h-20 sm:h-28 rounded-b-3xl bg-gradient-to-r from-[#170a26] via-[#2a0e3f] to-[#170a26] border-t-4 border-pink-400/80 shadow-2xl relative flex items-center justify-center px-3">
           <div className="flex items-center gap-1.5 text-pink-300/80 text-xs sm:text-sm font-serif text-center">
             <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500 flex-shrink-0" />
-            <span>Forever Loved by Aniket Singh</span>
+            <span>Forever Loved by Vicky Singh</span>
             <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500 flex-shrink-0" />
           </div>
         </div>
@@ -248,7 +248,7 @@ export default function BirthdayCake({ id = "cake-section" }: BirthdayCakeProps)
             Your 23rd Birthday Wish Has Been Recorded ✨
           </h3>
           <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
-            &ldquo;May every dream you dare to envision blossom into reality in this 23rd year, Akankshya. Aniket is right beside you cheering for every step.&rdquo;
+            &ldquo;May every dream you dare to envision blossom into reality in this 23rd year, Akankshya. Vicky is right beside you cheering for every step.&rdquo;
           </p>
           <div className="inline-flex items-center gap-1.5 text-xs text-amber-300 font-medium">
             <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
@@ -287,7 +287,7 @@ export default function BirthdayCake({ id = "cake-section" }: BirthdayCakeProps)
               <textarea
                 value={customWish}
                 onChange={(e) => setCustomWish(e.target.value)}
-                placeholder="e.g. Endless love with Aniket, laughter, dream career milestones & wonderful travels…"
+                placeholder="e.g. Endless love, joy, dream career triumphs & wonderful travels together…"
                 rows={4}
                 className="w-full px-4 py-3 rounded-2xl bg-black/40 border border-pink-400/30 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-pink-400 resize-none"
                 autoFocus

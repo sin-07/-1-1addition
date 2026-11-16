@@ -61,7 +61,7 @@ export default function CompatibilityMeter({ id = "compatibility-section" }: Com
       </div>
 
       <h2 className="text-3xl sm:text-5xl font-serif text-white mb-4">
-        Aniket & Akankshya Compatibility Test
+        Vicky & Akankshya Compatibility
       </h2>
       <p className="text-slate-300/80 text-sm sm:text-base max-w-xl mx-auto mb-12">
         {comp.summary}

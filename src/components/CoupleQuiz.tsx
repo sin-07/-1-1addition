@@ -72,7 +72,7 @@ export default function CoupleQuiz({ id = "quiz-section" }: CoupleQuizProps) {
           How Well Do You Know Us?
         </h2>
         <p className="text-slate-300/80 text-xs sm:text-sm">
-          A playful 5-question test crafted by Aniket to celebrate our favorite memories and quirks.
+          A playful 5-question test celebrating our favorite shared memories and quirky moments.
         </p>
       </div>
 
@@ -131,7 +131,7 @@ export default function CoupleQuiz({ id = "quiz-section" }: CoupleQuizProps) {
             {isAnswered && (
               <div className="p-4 rounded-2xl bg-black/40 border border-amber-400/20 mb-6 animate-fadeIn text-xs sm:text-sm text-amber-200 italic flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-amber-300 flex-shrink-0" />
-                <span>Aniket&apos;s Commentary: &ldquo;{currentQ.aniketNote}&rdquo;</span>
+                <span>Vicky&apos;s Commentary: &ldquo;{currentQ.aniketNote}&rdquo;</span>
               </div>
             )}
 

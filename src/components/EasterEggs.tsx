@@ -73,7 +73,7 @@ export default function EasterEggs() {
               Secret Easter Egg Found!
             </h3>
             <p className="text-pink-300 text-xs font-mono uppercase tracking-wider mb-4">
-              Akankshya ❤️ Aniket Secret Chamber
+              Akankshya ❤️ Vicky Secret Chamber
             </p>
 
             <div className="p-4 rounded-2xl bg-black/40 border border-pink-400/20 text-slate-200 text-xs sm:text-sm leading-relaxed mb-6 italic whitespace-pre-line text-left">

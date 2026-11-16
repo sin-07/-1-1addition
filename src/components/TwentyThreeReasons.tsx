@@ -115,7 +115,7 @@ export default function TwentyThreeReasons({ id = "reasons-section" }: TwentyThr
           <span>One For Every Year of Your Life</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-serif text-white mb-4">
-          23 Reasons Why Aniket Loves Akankshya
+          23 Reasons Why You Are So Deeply Loved
         </h2>
         <p className="text-slate-300/80 text-sm sm:text-base mb-6">
           I could list a million reasons, but here are twenty-three heartfelt truths celebrating every single year of your existence.
@@ -192,7 +192,7 @@ export default function TwentyThreeReasons({ id = "reasons-section" }: TwentyThr
                   </div>
 
                   <div className="text-center text-[10px] text-slate-400">
-                    With love, Aniket ❤️
+                    With all my love, Vicky ❤️
                   </div>
                 </div>
               </div>
